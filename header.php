@@ -7,7 +7,7 @@
         define('IMG_PATH',"./src/img");
         define('SRC_PATH',"./src");
         if(empty($title)){
-            $title = "Animais";
+            $title = "Artigos para seu PET";
         }
     ?>
     <meta charset="UTF-8">
@@ -15,6 +15,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="OwO">
     <title>PETEZ | <?php echo $title ?></title>
+    <link rel="shortcut icon" href="<?= IMG_PATH ?>/paw_petez.svg" type="image/x-icon">
     <link rel="stylesheet" href="<?= CSS_PATH ?>/main.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">            
 </head>

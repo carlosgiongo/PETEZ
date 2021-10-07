@@ -1,6 +1,6 @@
 <?php
-  include_once 'database/db.php';
-  $title = "Pagina Inicial";
+  //include_once 'database/db.php';
+  $title = "Página Inicial";
   include_once 'header.php';
 ?>
 
