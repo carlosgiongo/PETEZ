@@ -1,5 +1,4 @@
 <?php
-
     // Require Composer's autoloader.
     require 'Medoo.php';
      
