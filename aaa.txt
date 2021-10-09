@@ -1,0 +1,27 @@
+object(stdClass)#1 (1) {
+  ["itens"]=>
+  array(2) {
+    [0]=>
+    array(4) {
+      [0]=>
+      int(1)
+      [1]=>
+      string(6) "Comida"
+      [2]=>
+      float(30)
+      [3]=>
+      int(1)
+    }
+    [1]=>
+    array(4) {
+      [0]=>
+      int(1)
+      [1]=>
+      string(6) "Comida"
+      [2]=>
+      float(30)
+      [3]=>
+      int(1)
+    }
+  }
+}

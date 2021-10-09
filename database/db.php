@@ -1,5 +1,4 @@
 <?php
-
     // Require Composer's autoloader.
     require 'Medoo.php';
      
@@ -12,7 +11,7 @@
     	'host' => 'localhost',
     	'database' => 'petez',
     	'username' => 'root',
-    	'password' => '',
+    	'password' => 'root',
      
     	// [optional]
     	'charset' => 'utf8mb4',
