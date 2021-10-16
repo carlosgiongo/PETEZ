@@ -11,7 +11,7 @@
     	'host' => 'localhost',
     	'database' => 'petez',
     	'username' => 'root',
-    	'password' => 'root',
+    	'password' => '',
      
     	// [optional]
     	'charset' => 'utf8mb4',

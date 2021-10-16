@@ -7,9 +7,9 @@ $produto_nome = 'Comida';
 $produto_valor = 30.00;
 $produto_quantidade = 1;
 
-//if(empty($_SESSION['ID']) || empty($produto)){
-//    header('Location:/');
-//}
+if(empty($_SESSION['ID'])){
+    header('Location:/');
+}
 
 if(empty($_SESSION['carrinho'])){
     $_SESSION['carrinho'] = new stdClass;
