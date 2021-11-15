@@ -2,7 +2,9 @@
   <footer class="row row-cols-5 py-5 my-5 border-top">
     <div class="row col-12">
       <div class="col col-sm-3 start d-none d-sm-block">
-        <img src="<?= IMG_PATH ?>/logo_petez.svg" class="img-fluid" alt="logo PETEZ">
+        <a href="./index.php">
+          <img src="<?= IMG_PATH ?>/logo_petez.svg" class="img-fluid" alt="logo PETEZ">
+        </a>
       </div>
       <div class="col col-sm-3">
         <ul class="nav flex-column">
