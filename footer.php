@@ -25,7 +25,7 @@
         <ul class="nav flex-column">
           <li class="nav-item text-muted"><h6>Pagamentos</h6></li>
         </ul>
-        <div class="row">
+        <div class="row payments_methods">
           <div class="col">
             <i class="fab fa-cc-mastercard fa-lg"></i>
           </div>

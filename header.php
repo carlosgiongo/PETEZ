@@ -23,7 +23,7 @@
 <header>
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container">
-      <a class="navbar-brand" href="#">
+      <a class="navbar-brand" href="./index.php">
         <img src="<?= IMG_PATH ?>/logo_header.png" alt="" width="140" height="35">
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample07" aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
@@ -40,7 +40,9 @@
             </ul>
           </li>
           <li class="nav-item">
-          <button type="button" class="btn btn-dark rounded-pill">ENTRAR</button>
+            <a href="./login.php">
+              <button type="button" class="btn btn-dark rounded-pill">ENTRAR</button>
+            </a>
           </li>
           <li class="nav-item">
             <button type="button rounded-circle" class="btn btn-dark">
