@@ -1,4 +1,4 @@
-<div class="container bg-dark">
+<div class="container-fluid bg-dark">
   <footer class="row row-cols-5 py-5 my-5 border-top">
     <div class="row col-12">
       <div class="col col-sm-3 start d-none d-sm-block">

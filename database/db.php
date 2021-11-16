@@ -1,17 +1,17 @@
 <?php
     // Require Composer's autoloader.
     require 'Medoo.php';
-     
+	$db_pass = getenv("HTTP_DB_PASS");
+
     // Using Medoo namespace.
     use Medoo\Medoo;
-     
     $database = new Medoo([
     	// [required]
     	'type' => 'mysql',
     	'host' => 'localhost',
     	'database' => 'petez',
     	'username' => 'root',
-    	'password' => '',
+    	'password' => $db_pass,
      
     	// [optional]
     	'charset' => 'utf8mb4',

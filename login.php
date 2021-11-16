@@ -4,17 +4,17 @@
   include_once 'header.php';
 ?>
 
-<body class="container">
+<body class="container-fluid">
   <main class="form-signin text-center">
-    <form>
+    <form method="POST" action="./API/clientes/login">
       <img class="mb-4" src="<?= IMG_PATH ?>/logo_header.png" alt="PETEZ Login" >
       <h1 class="h3 mb-3 fw-normal">Entre com seus dados</h1>
       <div class="form-floating">
-        <input type="email" class="form-control" id="floatingInput" placeholder="nome@exemplo.com">
+        <input type="email" class="form-control" id="floatingInput" placeholder="nome@exemplo.com" name="email">
         <label for="floatingInput">E-mail</label>
       </div>
       <div class="form-floating">
-        <input type="password" class="form-control" id="floatingPassword" placeholder="Senha">
+        <input type="password" class="form-control" id="floatingPassword" placeholder="Senha" name="senha">
         <label for="floatingPassword">Senha</label>
       </div>
       <div class="row">

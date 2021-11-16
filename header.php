@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <?php
+        include_once './database/db.php';
         define('CSS_PATH',"./src/css");
         define('JS_PATH',"./src/js");
         define('IMG_PATH',"./src/img");
@@ -22,7 +23,7 @@
 </head>
 <header>
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container">
+    <div class="container-fluid">
       <a class="navbar-brand" href="./index.php">
         <img src="<?= IMG_PATH ?>/logo_header.png" alt="" width="140" height="35">
       </a>
