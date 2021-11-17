@@ -3,6 +3,7 @@
 <head>
     <?php
         include_once './database/db.php';
+        session_start();
         define('CSS_PATH',"./src/css");
         define('JS_PATH',"./src/js");
         define('IMG_PATH',"./src/img");
@@ -42,7 +43,11 @@
           </li>
           <li class="nav-item">
             <a href="./login.php">
-              <button type="button" class="btn btn-dark rounded-pill">ENTRAR</button>
+              <?php if(empty($_SESSION['id'])){?>
+                <button type="button" class="btn btn-dark rounded-pill">ENTRAR</button>
+              <?php } else {?>
+                <label style="margin: 8px 8px;">Bem vindo, <?php echo $_SESSION['nome']?></label>
+              <?php } ?>
             </a>
           </li>
           <li class="nav-item">

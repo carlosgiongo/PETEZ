@@ -1,10 +1,12 @@
 <?php
 include_once '../../database/db.php';
+//session_destroy();
 
 $email = $_POST['email'];
 $senha = hash('sha256', $_POST['senha']);
 
 $data = $database->select("clientes", [
+    "id",
 	"nome",
 	"sobrenome",
     "email",
@@ -15,7 +17,13 @@ $data = $database->select("clientes", [
 
 if(count($data) < 1){
     echo "Sem resultados..";
+    header('Location:../../login');
 } else {
-    echo "Usuario cadastrado!";
+    session_destroy();
+    session_start();
+    $_SESSION['id'] = $data[0]['id'];
+    $_SESSION['nome'] = $data[0]['nome']." ".$data[0]['sobrenome'];
+    $_SESSION['email'] = $data[0]['email'];
+    header('Location:../../');
 }
 ?>
