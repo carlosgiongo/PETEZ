@@ -4,6 +4,8 @@
     <?php
         include_once './database/db.php';
         session_start();
+	      $url = getenv("TEST_URL");
+        define('MAIN_URL', $url);
         define('CSS_PATH',"./src/css");
         define('JS_PATH',"./src/js");
         define('IMG_PATH',"./src/img");
