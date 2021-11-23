@@ -2,7 +2,7 @@
   //include_once 'database/db.php';
   $title = "Página Inicial";
   include_once 'header.php';
-  //include_once './API/produtos/produtos.php' <--- SE PREFERIR TRABALHAR COM O PHP
+  //include_once './API/produtos/produtos.php' <--- SE PREFERIR TRABALHAR COM O PHP AO INVÉS DE CHAMADA API
 ?>
 
 <body>
