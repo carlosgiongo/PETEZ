@@ -8,6 +8,6 @@ $all_produtos = $database->select("produtos", [
     "IMAGEM"
 ]);
 
-$todos_produtos = json_encode($all_produtos);
-echo $todos_produtos;
+echo json_encode($all_produtos);
+// echo $todos_produtos;
 ?>

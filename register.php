@@ -4,8 +4,8 @@
   include_once 'header.php';
 ?>
 
-<body class="container">
-  <main>
+<body class="">
+  <main class="container">
     <form method="POST" action="./API/clientes/cadastro_cliente.php">
       <h3>Dados</h3>
       <div class="row">

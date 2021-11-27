@@ -4,7 +4,7 @@
   include_once 'header.php';
 ?>
 
-<body class="container-fluid">
+<body class="">
   <main class="form-signin text-center">
     <form method="POST" action="./API/clientes/login">
       <img class="mb-4" src="<?= IMG_PATH ?>/logo_header.png" alt="PETEZ Login" >

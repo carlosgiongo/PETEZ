@@ -1,19 +1,57 @@
 <?php
-  //include_once 'database/db.php';
+  // include_once 'database/db.php';
   $title = "Página Inicial";
   include_once 'header.php';
-  //include_once './API/produtos/produtos.php' <--- SE PREFERIR TRABALHAR COM O PHP AO INVÉS DE CHAMADA API
+  // include_once './API/produtos/produtos.php'; //<--- SE PREFERIR TRABALHAR COM O PHP AO INVÉS DE CHAMADA API
 ?>
 
-<body>
-<!-- FAZ O FETCH PARA API DE PRODUTOS -->
-<script>
-  fetch(<?php MAIN_URL ?>"API/produtos/produtos.php")
-  .then(async function(resposta) {
-    let todos_produtos = await resposta.json() 
-    console.log(todos_produtos)
-  })
-</script>
+<div id="myCarousel" class="carousel slide container" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="<?= IMG_PATH ?>/banner/banner_cachorro.jpg" alt="">
+        <div class="container">
+          <div class="carousel-caption text-start">
+            <h1>Encontre tudo o que precisa,</h1>
+            <p>para o seu melhor amigo!</p>
+            <p><a class="btn btn-lg btn-primary" href="./register.php">Registre-se</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="<?= IMG_PATH ?>/banner/banner_areia.png" alt="" width="1366" height="768">
+        <div class="container">
+          <div class="carousel-caption text-end">
+            <h1 class="text-dark">PETEZ. Artigos para O SEU pet!</h1>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="<?= IMG_PATH ?>/banner/banner_gato.jpg" alt="">
+        <div class="container">
+          <div class="carousel-caption text-end">
+            <h3>Os melhores PREÇOS esperando por você!</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <br />
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-3" ng-repeat="i in produtos">
+        <div class="card z-index-2">
+          <img class="card-img-top img-fluid" src="//placehold.it/500x200" alt="">
+          <div class="card-body">
+            <h3 class="card-title">{{ i.NOME }}</h3>
+            <h5 class="card-text">R${{ i.PRECO_VENDA }}</h5>
+            <a href="#" class="btn btn-outline-dark">COMPRAR</a>
+          </div>
+        </div>
+        <br />
+      </div>
+    </div>
+  </div>
 </body>
 
 <?php include_once 'footer.php' ?>
