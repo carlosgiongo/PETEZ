@@ -14,10 +14,10 @@ Trabalho realizado pelos alunos:
 
 ## Tecnologia
 - PHP;
-- Twitter Bootstrap;
+- Twitter Bootstrap
 - MySQL Server;
 - Medoo;
-- JavaScript;
+- AngularJS;
 - Figma;
 - Versionamento com GIT.
 
