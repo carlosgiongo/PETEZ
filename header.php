@@ -26,6 +26,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+    <script>
+      function callFinish(){
+        window.location.href = <?php if(isset($_SESSION['id'])){ echo "'./finalizarcompra.php'"; } else { echo "'./login.php'"; } ?>
+      }
+    </script>
 </head>
 <header>
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -48,7 +53,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <button type="button rounded-circle" class="btn btn-dark" id="btnCarrinho" aria-describedby="tooltip">
+            <button onclick="callFinish()" type="button rounded-circle" class="btn btn-dark" id="btnCarrinho" aria-describedby="tooltip">
               <i class="fas fa-shopping-cart"></i>
               <div id="tooltip" role="tooltip">
                 <?php if(count($_SESSION['carrinho']->itens) <= 0){?>

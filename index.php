@@ -49,7 +49,7 @@
               <input type="hidden" name="precoProduto" value={{i.PRECO_VENDA}}>
               <h3 class="card-title">{{ i.NOME }}</h3>
               <h5 class="card-text">R${{ i.PRECO_VENDA }}</h5>
-              <button type="submit" style="background: none; border:none; z-index:100"><a class="btn btn-outline-dark">COMPRAR</a></button> 
+              <button type="submit" class="btn btn-outline-dark">COMPRAR</button> 
             </div>
           </div>
         </form>

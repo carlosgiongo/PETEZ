@@ -28,6 +28,6 @@ foreach ($_SESSION['carrinho']->itens as $produto) {
 
 $_SESSION['carrinho']->total = $soma;
 
-var_dump($_SESSION['carrinho']->itens)
-//header('Location:../../index')
+//var_dump($_SESSION['carrinho']->itens)
+header('Location:../../index');
 ?>
