@@ -10,13 +10,15 @@ include_once "header.php";
     <div class="container">
         <div class="row">
             <div class="col d-flex justify-content-center">
-                <div class="text-center">
-                    <h1>Realizar pagamento</h1>
-                    <input class="form-control" type="text" placeholder="Nome completo">
-                    <input class="form-control" type="text" placeholder="Numero do cartao">
-                    <input class="form-control" type="text" placeholder="Codigo de segurança">
-                    <button class="btn btn-outline-dark" style="margin: 10px 0;" onclick="concluirPagamento()">Concluir</button>
-                </div>
+                <form action="./concluido.php" method="post">
+                    <div class="text-center">
+                        <h1>Realizar pagamento</h1>
+                        <input class="form-control" type="text" placeholder="Nome completo" required>
+                        <input class="form-control" type="text" placeholder="Numero do cartao" required>
+                        <input class="form-control" type="text" placeholder="Codigo de segurança" required>
+                        <button class="btn btn-outline-dark" style="margin: 10px 0;" type="submit">Concluir</button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
