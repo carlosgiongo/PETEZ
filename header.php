@@ -26,7 +26,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
-
 </head>
 <header>
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -39,26 +38,27 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarsExample07">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="dropdown07" data-bs-toggle="dropdown" aria-expanded="false">Menu</a>
-            <ul class="dropdown-menu" aria-labelledby="dropdown07">
-              <li><a class="dropdown-item" href="#">Ops!</a></li>
-              <li><a class="dropdown-item" href="#">Não tem nada</a></li>
-              <li><a class="dropdown-item" href="#">Aqui</a></li>
-            </ul>
-          </li>
           <li class="nav-item">
             <a href="./login.php">
               <?php if(empty($_SESSION['id'])){?>
-                <button type="button" class="btn btn-dark rounded-pill">ENTRAR</button>
+                <button type="button" class="btn btn-dark rounded-pill" style="margin: 0 10px;">ENTRAR</button>
               <?php } else {?>
                 <label style="margin: 8px 8px;">Bem vindo, <?php echo $_SESSION['nome']?></label>
               <?php } ?>
             </a>
           </li>
           <li class="nav-item">
-            <button type="button rounded-circle" class="btn btn-dark">
+            <button type="button rounded-circle" class="btn btn-dark" id="btnCarrinho" aria-describedby="tooltip">
               <i class="fas fa-shopping-cart"></i>
+              <div id="tooltip" role="tooltip">
+                <?php if(count($_SESSION['carrinho']->itens) <= 0){?>
+                  <div>Carrinho vazio</div>
+                <?php } else { 
+                  foreach ($_SESSION['carrinho']->itens as $produto) {?>
+                    <div><?php echo $produto[1] . " - R$" . $produto[2];?></div>
+                <?php } 
+              }?>
+              </div>
             </button>
           </li>
         </ul>

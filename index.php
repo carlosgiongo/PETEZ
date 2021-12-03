@@ -40,14 +40,19 @@
   <div class="container">
     <div class="row">
       <div class="col-sm-3" ng-repeat="i in produtos">
-        <div class="card z-index-2">
-          <img class="card-img-top img-fluid" src="//placehold.it/500x200" alt="">
-          <div class="card-body">
-            <h3 class="card-title">{{ i.NOME }}</h3>
-            <h5 class="card-text">R${{ i.PRECO_VENDA }}</h5>
-            <a href="#" class="btn btn-outline-dark">COMPRAR</a>
+        <form action="API/carrinho/insere.php" method="POST">
+          <div class="card z-index-2">
+            <img class="card-img-top img-fluid" src="//placehold.it/500x200" alt="">
+            <div class="card-body">
+              <input type="hidden" name="idProduto" value={{i.ID}}>
+              <input type="hidden" name="nomeProduto" value={{i.NOME}}>
+              <input type="hidden" name="precoProduto" value={{i.PRECO_VENDA}}>
+              <h3 class="card-title">{{ i.NOME }}</h3>
+              <h5 class="card-text">R${{ i.PRECO_VENDA }}</h5>
+              <button type="submit" style="background: none; border:none; z-index:100"><a class="btn btn-outline-dark">COMPRAR</a></button> 
+            </div>
           </div>
-        </div>
+        </form>
         <br />
       </div>
     </div>

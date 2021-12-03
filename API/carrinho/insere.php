@@ -2,14 +2,14 @@
 session_start();
 
 $soma = 0;
-$produto_id = 1;
-$produto_nome = 'Comida';
-$produto_valor = 30.00;
+$produto_id = $_POST['idProduto'];
+$produto_nome = $_POST['nomeProduto'];
+$produto_valor = $_POST['precoProduto'];
 $produto_quantidade = 1;
 
-if(empty($_SESSION['ID'])){
-    header('Location:/');
-}
+//if(empty($_SESSION['ID'])){
+//    header('Location:../../login.php');
+//}
 
 if(empty($_SESSION['carrinho'])){
     $_SESSION['carrinho'] = new stdClass;
@@ -27,6 +27,7 @@ foreach ($_SESSION['carrinho']->itens as $produto) {
 }
 
 $_SESSION['carrinho']->total = $soma;
-var_dump($_SESSION['carrinho']);
 
+var_dump($_SESSION['carrinho']->itens)
+//header('Location:../../index')
 ?>

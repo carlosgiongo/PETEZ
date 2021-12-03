@@ -17,7 +17,7 @@
         <input type="password" class="form-control" id="floatingPassword" placeholder="Senha" name="senha">
         <label for="floatingPassword">Senha</label>
       </div>
-      <div class="row">
+      <div class="row" style="margin-top: 15px;">
         <div class="col col-sm-6">
           <button class="w-100 btn btn-dark" type="submit">Entrar</button>
         </div>
